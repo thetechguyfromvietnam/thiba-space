@@ -56,7 +56,11 @@ export default function CheckInForm({ onCheckIn, onClose }: CheckInFormProps) {
                 >
                   <div className="package-name">{pkg.name}</div>
                   <div className="package-description">{pkg.description}</div>
-                  <div className="package-hours">{pkg.hours} giờ</div>
+                  <div className="package-hours">
+                    {pkg.hours < 1 
+                      ? `${Math.round(pkg.hours * 60)} phút` 
+                      : `${pkg.hours} giờ`}
+                  </div>
                 </div>
               ))}
             </div>

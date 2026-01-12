@@ -1,4 +1,4 @@
-export type PackageType = 'deep-work' | 'light-work' | 'fun-work';
+export type PackageType = 'deep-work' | 'light-work' | 'fun-work' | 'test';
 
 export interface Customer {
   id: string;
@@ -39,6 +39,13 @@ export const PACKAGES: Package[] = [
     hours: 1,
     price: 0,
     description: '1 giờ + 1 nước'
+  },
+  {
+    type: 'test',
+    name: 'Test',
+    hours: 10 / 60, // 10 phút = 0.167 giờ
+    price: 0,
+    description: '10 phút + 1 nước'
   }
 ];
 
