@@ -11,7 +11,7 @@ interface CustomerCardProps {
 }
 
 export default function CustomerCard({ customer, onCheckOut, onDelete }: CustomerCardProps) {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [, setTick] = useState(0);
 
   // Update time every second to trigger re-render (chỉ khi chưa checkout)
   useEffect(() => {
@@ -20,7 +20,8 @@ export default function CustomerCard({ customer, onCheckOut, onDelete }: Custome
       return;
     }
     const interval = setInterval(() => {
-      setCurrentTime(new Date());
+      // Force re-render by updating state
+      setTick(prev => prev + 1);
     }, 1000);
     return () => clearInterval(interval);
   }, [customer.checkedOut]);

@@ -1,4 +1,4 @@
-import { Customer, OVERTIME_RATE, Package } from './types';
+import { Customer, OVERTIME_RATE } from './types';
 
 export function formatTime(date: Date): string {
   return date.toLocaleTimeString('vi-VN', { 

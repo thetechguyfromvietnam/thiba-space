@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Customer, PackageType, PACKAGES } from './types';
-import { formatTime, formatDate, calculateElapsedHours, calculateOvertimeHours, calculateOvertimeFee, formatCurrency, formatDuration } from './utils';
+import { calculateOvertimeFee, formatCurrency } from './utils';
 import CheckInForm from './components/CheckInForm';
 import CustomerCard from './components/CustomerCard';
 import BillModal from './components/BillModal';
